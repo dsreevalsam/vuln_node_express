@@ -25,8 +25,9 @@ jobs:
         run: npm run start &
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.7.0
-        with:
-          target: 'https://staging-snap.springernature.com/'
+        env:
           ZAP_AUTH_HEADER: 'Cookie'
-          ZAP_AUTH_HEADER_VALUE: 'idp_marker=0e55251f-3422-467b-b644-9bfb13973870; sncc=P=67:V=4.0.0&C=C01,C02&D=true; _ga=GA1.2.1262097418.1686148764; _gid=GA1.2.1456373384.1686148764; _hjFirstSeen=1; _hjSession_3298197=eyJpZCI6IjUyNjBhMDA4LTExNGItNGRlZS1iOTM1LTk2MWVlNjY5YTZlNCIsImNyZWF0ZWQiOjE2ODYxNDg4OTc0MjksImluU2FtcGxlIjp0cnVlfQ==; _hjAbsoluteSessionInProgress=0; _hjSessionUser_3298197=eyJpZCI6IjU4NzEzMDU3LTkzNDAtNTk5ZS1hNWE2LTdhNzY3MjFlMTBhYyIsImNyZWF0ZWQiOjE2ODYxNDg4OTc0MjQsImV4aXN0aW5nIjp0cnVlfQ==; _gat_gtag_UA_64768501_1=1; idp_session=sVERSION_1c3a4a034-a3e7-4895-8662-1de081033c2c; idp_session_http=hVERSION_163aa802d-42b9-49ac-864f-c80cb7209af8'
-
+          ZAP_AUTH_HEADER_VALUE: 'idp_marker=0e55251f-3422-467b-b644-9bfb13973870; sncc=P=67:V=4.0.0&C=C01,C02&D=true; _ga=GA1.2.1262097418.1686148764; _gid=GA1.2.1456373384.1686148764; _hjFirstSeen=1; _hjSession_3298197=eyJpZCI6IjUyNjBhMDA4LTExNGItNGRlZS1iOTM1LTk2MWVlNjY5YTZlNCIsImNyZWF0ZWQiOjE2ODYxNDg4OTc0MjksImluU2FtcGxlIjp0cnVlfQ==; _hjAbsoluteSessionInProgress=0; _hjSessionUser_3298197=eyJpZCI6IjU4NzEzMDU3LTkzNDAtNTk5ZS1hNWE2LTdhNzY3MjFlMTBhYyIsImNyZWF0ZWQiOjE2ODYxNDg4OTc0MjQsImV4aXN0aW5nIjp0cnVlfQ==; _gat_gtag_UA_64768501_1=1; idp_session=sVERSION_12bb60bd6-94be-4584-9735-fa088889fa17; idp_session_http=hVERSION_1f19912d2-5cf8-48a2-ab6d-ebc01ce5bd95'
+        with:
+          target: 'https://librarian.springernature.com/'
+          
