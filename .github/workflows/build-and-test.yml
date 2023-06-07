@@ -21,3 +21,9 @@ jobs:
         run: npm install
       - name: Run unit tests
         run: npm test
+      - name: Run app
+        run: npm run start &
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.4.0
+        with:
+          target: 'http://localhost:3000/'
