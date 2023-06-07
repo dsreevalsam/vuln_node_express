@@ -24,6 +24,6 @@ jobs:
       - name: Run app
         run: npm run start &
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@master
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           target: 'http://localhost:3000/'
